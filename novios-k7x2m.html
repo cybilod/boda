@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Invitaciones personales · Duvan & Yesenia</title>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#b8892b;--gold2:#8a6418;--rose:#c9979a;--rose2:#a56f73;--rose3:#ecd5d4;--rose4:#fbf1ef;--ink:#3b2f30;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:#fbf1ef radial-gradient(120% 70% at 50% 0%,#fff 0%,#fbf1ef 52%,#efd6d4 100%) fixed;color:var(--ink);font:17px 'Jost',system-ui,sans-serif;min-height:100vh}
+.wrap{max-width:460px;margin:0 auto;padding:26px 16px 90px}
+.script{font-family:'Pinyon Script',cursive;font-weight:400;line-height:1.15}
+.foil{background:linear-gradient(100deg,#e9cf84 0%,#b8892b 30%,#fff1b0 50%,#b8892b 70%,#e9cf84 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:-220% 0}}
+header{text-align:center;padding:6px 8px 4px}
+header svg{width:74px}
+h1{font-size:50px;margin-top:2px}
+header p{font:italic 500 21px/1.35 'Cormorant Garamond',serif;color:var(--rose2);margin-top:6px}
+.card{position:relative;background:linear-gradient(180deg,#fff,var(--rose4));border-radius:28px;padding:24px 20px;margin-top:18px;box-shadow:0 16px 36px rgba(165,111,115,.18);border:1px solid var(--rose3)}
+.card::after{content:"";position:absolute;inset:6px;border:1px solid var(--rose3);border-radius:22px;pointer-events:none}
+.card>*{position:relative;z-index:1}
+.step{display:flex;align-items:center;gap:10px;margin:0 0 10px}
+.step+input,.step+.stepper{margin-bottom:20px}
+.step i{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#d9b45a,#8a6418);color:#fff;font:500 15px/30px 'Jost',sans-serif;text-align:center;font-style:normal;flex:none}
+.step label{font:600 21px 'Cormorant Garamond',serif;color:var(--ink)}
+input{width:100%;padding:16px 18px;font:400 19px 'Jost',sans-serif;color:var(--ink);background:#fff;border:1.5px solid var(--rose3);border-radius:16px;outline:none;transition:border .2s,box-shadow .2s}
+input:focus{border-color:var(--rose);box-shadow:0 0 0 4px rgba(201,151,154,.2)}
+input.err{border-color:#c47f86;animation:sk .35s}
+@keyframes sk{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.stepper{display:flex;align-items:center;justify-content:center;gap:22px}
+.stepper button{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--rose);background:#fff;color:var(--rose2);font:300 30px/1 'Jost',sans-serif;cursor:pointer}
+.stepper button:active{background:var(--rose4)}
+.stepper span{min-width:64px;text-align:center;font:500 46px 'Cormorant Garamond',serif;color:var(--gold2)}
+.btn{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:17px 20px;border:0;border-radius:99px;font:500 15px 'Jost',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff;cursor:pointer;text-decoration:none;transition:transform .15s}
+.btn:active{transform:scale(.98)}
+.btn.g{background:linear-gradient(135deg,#d9b45a,#8a6418);box-shadow:0 10px 22px rgba(138,100,24,.3)}
+.btn.r{background:linear-gradient(135deg,#dcaeb0,#a56f73);box-shadow:0 10px 22px rgba(165,111,115,.35)}
+.btn.o{background:#fff;color:var(--rose2);border:1.5px solid var(--rose);box-shadow:none}
+.btn+.btn{margin-top:10px}
+.btn svg{width:19px;flex:none}
+.btn.g::after,.btn.r::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:sw 3.8s infinite}
+@keyframes sw{60%,100%{left:130%}}
+/* resultado */
+.ok{text-align:center;animation:pop .5s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(10px)}}
+.ok .t{font:500 12px 'Jost',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold2)}
+.prev{margin:12px 0 18px;padding:14px 12px;border:1px solid var(--rose);border-radius:20px;background:var(--rose4)}
+.prev span{display:block;font:300 11px 'Jost',sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--rose2)}
+.prev b{display:block;font:400 40px/1.15 'Pinyon Script',cursive;color:var(--rose2)}
+.prev i{font:400 13px 'Jost',sans-serif;letter-spacing:.2em;color:var(--gold2);font-style:normal}
+h2{font-size:38px;color:var(--rose2);text-align:center;margin-bottom:6px}
+.empty{text-align:center;font:italic 500 19px 'Cormorant Garamond',serif;color:var(--rose2);padding:8px 0}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 0;border-top:1px solid var(--rose3)}
+.acts{display:flex;gap:8px;align-items:center;width:100%}.acts .mini{flex:1}
+.row:first-of-type{border-top:0}
+.who{flex:1 1 100%;min-width:0}
+.who b{display:block;font:600 22px 'Cormorant Garamond',serif;overflow-wrap:anywhere}
+.who small{font:300 13px 'Jost',sans-serif;letter-spacing:.14em;color:var(--rose2)}
+.row.sent .who b{color:#a99;text-decoration:line-through;text-decoration-color:var(--rose3)}
+.mini{border:1.5px solid var(--rose);background:#fff;color:var(--rose2);border-radius:12px;padding:10px 11px;font:500 12.5px 'Jost',sans-serif;cursor:pointer;white-space:nowrap}
+.mini.w{background:linear-gradient(135deg,#dcaeb0,#a56f73);border-color:transparent;color:#fff}
+.mini.c{flex:0 0 46px}.mini.c.on{background:var(--gold2);border-color:var(--gold2);color:#fff}
+.x{border:0;background:none;color:#c9a9ab;font-size:22px;cursor:pointer;padding:4px 2px}
+.gen p{font:italic 500 19px/1.35 'Cormorant Garamond',serif;color:var(--ink);text-align:center;margin-bottom:14px}
+.note{margin-top:20px;text-align:center;font:300 13.5px/1.55 'Jost',sans-serif;color:var(--rose2);padding:0 10px}
+.warn{background:#fff6e0;border:1px solid #e9cf84;color:var(--gold2);border-radius:14px;padding:10px 14px;font-size:13.5px;margin-top:16px;text-align:center}
+#toast{position:fixed;left:50%;bottom:max(26px,env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:13px 22px;border-radius:99px;font:400 15px 'Jost',sans-serif;opacity:0;pointer-events:none;transition:all .3s;z-index:20;white-space:nowrap}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+ <header>
+  <svg viewBox="0 0 200 120"><defs><linearGradient id="rg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f1d98b"/><stop offset=".5" stop-color="#b8892b"/><stop offset="1" stop-color="#7a5510"/></linearGradient></defs><ellipse cx="78" cy="62" rx="58" ry="40" transform="rotate(-18 78 62)" fill="none" stroke="url(#rg)" stroke-width="10"/><ellipse cx="125" cy="66" rx="48" ry="34" transform="rotate(-12 125 66)" fill="none" stroke="url(#rg)" stroke-width="8"/></svg>
+  <h1 class="script foil">Mis invitaciones</h1>
+  <p>Escribe el nombre, elige los cupos y envíala por WhatsApp</p>
+ </header>
+ <div class="warn" id="warn" hidden>Abre esta página desde su enlace publicado (no desde el archivo) para que los enlaces salgan completos.</div>
+
+ <section class="card">
+  <div class="step"><i>1</i><label for="nom">¿Para quién es?</label></div>
+  <input id="nom" placeholder="Ej: Familia Pérez" autocomplete="off" maxlength="60">
+  <div class="step"><i>2</i><label>¿Cuántos cupos?</label></div>
+  <div class="stepper"><button id="minus" aria-label="Menos">−</button><span id="cup">1</span><button id="plus" aria-label="Más">+</button></div>
+  <button class="btn g" id="crear" style="margin-top:22px">Crear invitación</button>
+ </section>
+
+ <section class="card ok" id="res" hidden>
+  <div class="t">¡Lista!</div>
+  <div class="prev"><span>Invitación personal para</span><b id="rn"></b><i id="rc"></i></div>
+  <button class="btn r" id="rwa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.3 2.5 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1.3z"/></svg>Enviar por WhatsApp</button>
+  <button class="btn o" id="rcp">Copiar enlace</button>
+ </section>
+
+ <section class="card">
+  <h2 class="script">Mis invitados</h2>
+  <div id="lista"></div>
+ </section>
+
+ <section class="card gen">
+  <p>¿Una invitación para quien no lleva nombre?</p>
+  <button class="btn o" id="gcp">Copiar invitación general</button>
+ </section>
+ <p class="note">Toca <b>✓</b> cuando ya enviaste cada invitación. Esta lista queda guardada en este teléfono o computador.</p>
+</main>
+<div id="toast"></div>
+
+<script>
+var SECRET="dy26|rosa|7dic",KEY="dy_invitados_v1",$=function(i){return document.getElementById(i)};
+function hs(s){s=s.normalize('NFC');var x=5381;for(var i=0;i<s.length;i++)x=((x<<5)+x+s.charCodeAt(i))|0;return(x>>>0).toString(36).slice(-6)}
+var SITIO='https://nuestraboda-dy.netlify.app/';
+function base(){return SITIO}
+function url(n,c){return base()+'?para='+encodeURIComponent(n)+'&cupos='+c+'&k='+hs(SECRET+'|'+n+'|'+c)}
+function msg(n,u){return 'Hola '+n+', te compartimos tu invitación personal a nuestra boda 💍\n'+u}
+function toast(t){var e=$('toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(function(){e.classList.remove('on')},1900)}
+function copy(t){function fb(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity=0;document.body.appendChild(a);a.select();try{document.execCommand('copy');toast('¡Enlace copiado!')}catch(e){toast('No se pudo copiar')}a.remove()}
+ if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(function(){toast('¡Enlace copiado!')},fb);else fb()}
+function wa(n,u){window.open('https://wa.me/?text='+encodeURIComponent(msg(n,u)),'_blank')}
+var L=[];try{L=JSON.parse(localStorage.getItem(KEY)||'null')}catch(e){}
+if(!L)L=[{n:'Erika y Andrés',c:2},{n:'Yirley Agamez',c:1},{n:'Julio y Dayana',c:2},{n:'Esnaider',c:1},{n:'Yennifer',c:1}];
+function save(){try{localStorage.setItem(KEY,JSON.stringify(L))}catch(e){}}
+function draw(){var h='';
+ if(!L.length)h='<div class="empty">Aún no has creado invitaciones</div>';
+ L.forEach(function(g,i){h+='<div class="row'+(g.s?' sent':'')+'"><div class="who"><b>'+g.n.replace(/</g,'&lt;')+'</b><small>'+g.c+(g.c==1?' CUPO':' CUPOS')+(g.s?' · ENVIADA':'')+'</small></div>'
+  +'<div class="acts"><button class="mini w" data-a="wa" data-i="'+i+'">WhatsApp</button><button class="mini" data-a="cp" data-i="'+i+'">Copiar</button><button class="mini c'+(g.s?' on':'')+'" data-a="ck" data-i="'+i+'" aria-label="Marcar enviada">✓</button><button class="x" data-a="del" data-i="'+i+'" aria-label="Borrar">×</button></div></div>'});
+ $('lista').innerHTML=h}
+$('lista').onclick=function(e){var b=e.target.closest('button');if(!b)return;var i=+b.dataset.i,g=L[i],a=b.dataset.a;
+ if(a=='wa'){wa(g.n,url(g.n,g.c));g.s=true;save();draw()}
+ else if(a=='cp'){copy(url(g.n,g.c))}
+ else if(a=='ck'){g.s=!g.s;save();draw()}
+ else if(a=='del'&&confirm('¿Borrar la invitación de '+g.n+'?')){L.splice(i,1);save();draw()}};
+var cup=1;
+function setc(v){cup=Math.max(1,Math.min(20,v));$('cup').textContent=cup}
+$('minus').onclick=function(){setc(cup-1)};$('plus').onclick=function(){setc(cup+1)};
+var cur=null;
+$('crear').onclick=function(){var n=$('nom').value.trim().replace(/\s+/g,' ');
+ if(!n){$('nom').classList.add('err');$('nom').focus();toast('Escribe el nombre');setTimeout(function(){$('nom').classList.remove('err')},500);return}
+ var ex=L.filter(function(g){return g.n===n&&g.c===cup})[0];
+ if(!ex){L.unshift({n:n,c:cup});save();draw()}
+ cur={n:n,c:cup};$('rn').textContent=n;$('rc').textContent='CUPOS: '+cup;$('res').hidden=false;
+ $('res').style.animation='none';void $('res').offsetWidth;$('res').style.animation='';
+ $('res').scrollIntoView({behavior:'smooth',block:'center'});$('nom').value='';setc(1)};
+$('nom').addEventListener('keydown',function(e){if(e.key==='Enter')$('crear').click()});
+$('rwa').onclick=function(){if(!cur)return;wa(cur.n,url(cur.n,cur.c));var g=L.filter(function(x){return x.n===cur.n&&x.c===cur.c})[0];if(g){g.s=true;save();draw()}};
+$('rcp').onclick=function(){if(cur)copy(url(cur.n,cur.c))};
+$('gcp').onclick=function(){copy(base())};
+draw();
+</script>
+</body>
+</html>
